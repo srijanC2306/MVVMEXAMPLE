@@ -10,7 +10,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.mvvmkotlin.ViewModel.MainViewModel
 import com.example.mvvmkotlin.databinding.ItemBinding
 
-class NoteRecyclerAdapter(val viewModel: MainViewModel, val arrayList: ArrayList<Blog>, val context: Context): RecyclerView.Adapter<NoteRecyclerAdapter.NotesViewHolder>() {
+class NoteRecyclerAdapter(val viewModel: MainViewModel, val arrayList: ArrayList<Blog>, val context: Context):
+    RecyclerView.Adapter<NoteRecyclerAdapter.NotesViewHolder>() {
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int,
@@ -20,7 +21,7 @@ class NoteRecyclerAdapter(val viewModel: MainViewModel, val arrayList: ArrayList
     }
 
     override fun onBindViewHolder(holder: NoteRecyclerAdapter.NotesViewHolder, position: Int) {
-        holder.bind(arrayList.get(position))
+        holder.bind(arrayList[position])
     }
 
     override fun getItemCount(): Int {
